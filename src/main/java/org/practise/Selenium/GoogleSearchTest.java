@@ -46,6 +46,19 @@ public class GoogleSearchTest {
         // Now click on "Rajiv Gandhi International Airport"
         driver.findElement(By.xpath("//p[contains(text(),'Bengaluru International Airport')]")).click();
 
+        // Select Date from Calendar
+        driver.findElement(By.xpath("//div[@aria-label='Tue Jul 01 2025']//p[text()='1']")).click();
+
+        // Selecting Passengers
+        driver.findElement(By.xpath("//span[text()='Travellers & Class']")).click();
+        driver.findElement(By.xpath("(//div[@class='appendBottom20']//li[text()='2'])[1]")).click();
+        driver.findElement(By.xpath("//button[text()='APPLY']")).click();
+
+        // Click the Checkbox
+//        driver.findElement(By.xpath("//span[@class='commonCheckbox flights sizeSm primaryCheckbox ']")).click();
+        driver.findElement(By.xpath("//a[text()='Search']")).click();
+
+
         driver.quit();
     }
 }
