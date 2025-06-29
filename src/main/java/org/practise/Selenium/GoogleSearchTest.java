@@ -3,9 +3,7 @@ package org.practise.Selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
@@ -55,8 +53,13 @@ public class GoogleSearchTest {
         driver.findElement(By.xpath("//button[text()='APPLY']")).click();
 
         // Click the Checkbox
-//        driver.findElement(By.xpath("//span[@class='commonCheckbox flights sizeSm primaryCheckbox ']")).click();
+        // driver.findElement(By.xpath("//span[@class='commonCheckbox flights sizeSm primaryCheckbox ']")).click();
         driver.findElement(By.xpath("//a[text()='Search']")).click();
+
+        driver.findElement(By.id("bookbutton-RKEY:89da9127-ef39-46a7-8925-b68c3c60a8c1:24_0")).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.findElement(By.xpath("(//div[@class='makeFlex spaceBetween center cta-container']//button[@class='lato-black button buttonPrimary buttonBig fontSize14'])[1]")).click();
 
         driver.quit();
     }
