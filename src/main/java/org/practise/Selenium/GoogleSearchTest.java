@@ -58,7 +58,6 @@ public class GoogleSearchTest {
 //        driver.findElement(By.xpath("//span[@class='commonCheckbox flights sizeSm primaryCheckbox ']")).click();
         driver.findElement(By.xpath("//a[text()='Search']")).click();
 
-
         driver.quit();
     }
 }
